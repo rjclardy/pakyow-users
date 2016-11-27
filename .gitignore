@@ -1,8 +1,6 @@
-# ignore bundler config
 .bundle
-
-# ignore environment files
 .env*
-
-# ignore binstubs
 bin
+.DS_Store
+.sass-cache
+.assets
