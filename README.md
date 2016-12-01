@@ -1,4 +1,4 @@
-This repo is a base Pakyow v0.11 project plus a set of migrations, models, routes, and views for basic user authentication.
+This repo is a base Pakyow v0.11 project plus a set of migrations, models, views, and routes for basic user authentication.
 
 # Getting Started
 
@@ -37,4 +37,4 @@ This repo is a base Pakyow v0.11 project plus a set of migrations, models, route
   bundle exec pakyow server
   ```
 
-5. Modify the default validations, views, and routes as needed while building out the rest of your app.
+5. Modify the default models, views, and routes as needed while building out the rest of your app.
