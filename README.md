@@ -2,10 +2,39 @@ This repo is a base Pakyow v0.11 project plus a set of migrations, models, route
 
 # Getting Started
 
-1. Open the user and token migration files and add/remove the properties you need.
+1. Clone this repo:
 
-2. Setup the database:
+  ```
+  git clone git@github.com:rjclardy/pakyow-users.git
+  ```
 
-    `bundle exec rake db:setup`
+2. Add this function to your `~/.bash_profile` to make creating new Pakyow User apps easy:
 
-3. Modify the default validations, views, and routes to fit your app's needs.
+  ```bash
+  pakyow-users() { cp -r /full/path/to/pakyow-users-app "$@"; }
+  ```
+
+# Creating Projects
+
+1. Create a new Pakyow Users project from the command line and move into it:
+
+  ```
+  pakyow-users myapp
+  cd myapp
+  ```
+
+2. Open each of the migration files and add/remove properties to match the needs of your app. (Note: This is an optional step. You can always come back and write new migrations to modify the default schema at any point.)
+
+3. Setup the database:
+
+  ```
+  bundle exec rake db:setup
+  ```
+
+4. You've now got a Pakyow project bootstrapped with basic user authentication! Start the server and find your app running at [http://localhost:3000](http://localhost:3000):
+
+  ```
+  bundle exec pakyow server
+  ```
+
+5. Modify the default validations, views, and routes as needed while building out the rest of your app.
