@@ -1,0 +1,17 @@
+div.align-c
+  h3 Please sign in
+
+  form@@session action="/session" method="POST"
+    /! @include errors
+
+	fieldset
+	  ul.plain
+		li
+		  input@login type="text" name="login" autofocus=true placeholder="email"
+		li
+		  input@password type="password" name="password" placeholder="password"
+		li
+		  input.button.signin-button type="submit" value="Sign In"
+		li
+		  a href="/users/forgot-password" forgot password?
+

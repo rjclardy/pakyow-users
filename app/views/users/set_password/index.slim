@@ -1,0 +1,16 @@
+div.align-c
+  h3 Reset your password
+
+  form@@user action="/users/set-password" method="POST"
+    /! @include errors
+
+    fieldset
+      input@token type="hidden" name="token"
+
+      ul.plain
+        li
+          input@password type="password" name="password" autofocus=true placeholder="password"
+        li
+          input@password_confirmation type="password" name="password_confirmation" placeholder="password confirmation"
+        li
+          input.button.signin-button type="submit" value="Set Password"

@@ -1,0 +1,13 @@
+div.align-c
+  h3 Request password reset
+
+  form@@user action="/users/forgot-password" method="POST"
+    /! @include errors
+
+	fieldset
+	  ul.plain
+		li
+		  input@email type="email" name="email" autofocus=true placeholder="email"
+		li
+		  input.button.signin-button type="submit" value="Reset Password"
+
