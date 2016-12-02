@@ -11,16 +11,15 @@ This repo is a base Pakyow v0.11 project plus a set of migrations, models, views
 2. Add this function to your `~/.bash_profile` to make creating new Pakyow User apps easy:
 
   ```bash
-  pakyow-users() { cp -r /full/path/to/pakyow-users "$@"; }
+  pakyow-users() { cp -r /full/path/to/pakyow-users "$@"; cd "$@"; rm -rf .git; }
   ```
 
 # Creating Projects
 
-1. Create a new Pakyow Users project from the command line and move into it:
+1. Create a new Pakyow Users project from the command line:
 
   ```
   pakyow-users myapp
-  cd myapp
   ```
 
 2. Open each of the migration files and add/remove properties to match the needs of your app. (Note: This is an optional step. You can always come back and write new migrations to modify the default schema at any point.)
